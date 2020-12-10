@@ -1,0 +1,24 @@
+#catalog-page {
+    .catalog-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 0 1rem;
+
+        .catalog-list-item {
+            margin: 0.5rem;
+            max-width: 100%;
+
+            img {
+                width: 100%;
+                object-fit: contain;
+                vertical-align: top;
+            }
+
+            p {
+                font-size: 14px;
+                margin: 1rem 0;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
