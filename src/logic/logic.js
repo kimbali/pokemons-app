@@ -1,5 +1,8 @@
+const validateEmail = require('../utils/validate-email');
+
 const logic = {
-    url: 'http://localhost:8080',
+    _url: 'http://localhost:8080',
+    url: 'https://git.heroku.com/pokemon-api-haufe.git',
 
     _call(path, method, headers, body, expectedStatus) {
         const config = { method }
@@ -19,13 +22,28 @@ const logic = {
             })
     },
 
+    _validateEmail(email) {
+        if (!validateEmail(email)) throw new Error('invalid email')
+    },
+
+
+    registarUser(email, password) {
+        return Promise.resolve()
+            .then(() => {
+                this._validateEmail(email)
+                this._validateStringField('password', password)
+
+                return this._call('user-register', 'POST', { 'Content-Type': 'application/json' }, JSON.stringify({ email, password }), 201)
+                    .then(() => true)
+            })
+    },
+
     createCatalog() {
         return Promise.resolve()
             .then(() => {
                 return this._call('catalog', 'GET', { 'Content-Type': 'application/json' }, undefined, 200)
             })
             .then(res => res.json())
-            .then(res => res)
     },
 
 }
