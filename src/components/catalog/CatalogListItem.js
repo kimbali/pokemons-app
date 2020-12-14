@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import POKEDEX_IMG from '../../images/pokedex.png';
 
-function CatalogListItem({ pokemon }) {
+function CatalogListItem({ pokemon } = {}) {
     const { id, name, type} = pokemon;
     const [IMG_URL, setImageURL] = useState(null);
 
@@ -17,7 +17,6 @@ function CatalogListItem({ pokemon }) {
                 }
             })
             .catch((err) => console.log(err))
-
     }, [id])
     
     if(!IMG_URL) return null;
@@ -30,7 +29,11 @@ function CatalogListItem({ pokemon }) {
 }
 
 CatalogListItem.propTypes = {
-
+    pokemon: PropTypes.objectOf({ 
+        id: PropTypes.number, 
+        name: PropTypes.string, 
+        type: PropTypes.array 
+    })
 }
 
 export default CatalogListItem
