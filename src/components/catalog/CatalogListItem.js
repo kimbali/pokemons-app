@@ -22,19 +22,15 @@ function CatalogListItem({ pokemon } = {}) {
     if(!IMG_URL) return null;
     return (
         <li className="catalog-list-item">
-            <p>{name}</p>
             <img height="100" alt={name} src={IMG_URL}/>
+            <p>{name}</p>
         </li>
     )
 }
 
 CatalogListItem.propTypes = {
-    pokemon: PropTypes.objectOf({ 
-        id: PropTypes.number, 
-        name: PropTypes.string, 
-        type: PropTypes.array 
-    })
+    pokemon: PropTypes.object
 }
 
-export default CatalogListItem
+export default CatalogListItem;
 

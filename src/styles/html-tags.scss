@@ -10,13 +10,9 @@ html {
         text-align: center;
     }
 
-    h1,
-    h2 {
-        font-family: $titlesFont;
-    }
-
     body {
-        background-color: $background;
+        position: relative;
+        background-color: $dark;
         line-height: 1.5;
         font-size: 1.2rem;
         margin: 0;
@@ -41,6 +37,13 @@ html {
                 cursor: pointer;
                 text-decoration: underline;
             }
+        }
+
+        button {
+            background-color: transparent;
+            margin: 0;
+            padding: 0;
+            border: none;
         }
 
         button,

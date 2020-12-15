@@ -1,0 +1,28 @@
+.App {
+    .page-header {
+        background-color: $primary;
+        position: relative;
+        padding: 1rem 1rem 0;
+        box-shadow: $downShadow;
+
+        .logo {
+            height: 4rem;
+            margin: 0;
+        }
+    }
+
+    h1 {
+        background-color: $secondary;
+        margin: 0;
+        padding: 1rem 0 1rem;
+        color: $primary;
+        font-family: $secondFont;
+        position: sticky;
+        top: 0;
+    }
+
+    .main-content {
+        padding: 2rem;
+        margin-top: 1.5rem;
+    }
+}

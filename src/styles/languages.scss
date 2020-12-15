@@ -1,0 +1,25 @@
+.languages-list {
+    display: flex;
+    justify-content: center;
+
+    @include media('mama-bear') {
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        z-index: 1;
+    }
+
+    &-item {
+        margin: 0.5rem 1rem;
+
+        button {
+            .flag {
+                font-size: 2rem;
+
+                @include media('mama-bear') {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
