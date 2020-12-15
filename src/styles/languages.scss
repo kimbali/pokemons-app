@@ -15,6 +15,7 @@
         button {
             .flag {
                 font-size: 2rem;
+                box-shadow: $downShadow;
 
                 @include media('mama-bear') {
                     font-size: 1.5rem;

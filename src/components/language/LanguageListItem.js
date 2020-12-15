@@ -8,7 +8,13 @@ function LanguageListItem({ ISOcode, handleCountrySelection }) {
     return (
         <li className="languages-list-item">
             <button type="button" onClick={handleClick}>
-                <CountryFlag countryCode={ISOcode} svg className="flag" />
+                <CountryFlag 
+                    countryCode={ISOcode} 
+                    svg 
+                    className="flag"
+                    style={{
+                        height: 'auto',
+                    }}/>
             </button>
         </li>
     )

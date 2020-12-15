@@ -20,7 +20,7 @@ function Pokemon({ params }) {
     if(!pokemonData) return null;
     
     const pokemonName = pokemonData.name[languages[lang]]
-    const { base, type } = pokemonData;
+    const { base } = pokemonData;
     return (
         <Layout pageId="pokemon-details" title={pokemonName}>
             <div className="pokemon-details-data">

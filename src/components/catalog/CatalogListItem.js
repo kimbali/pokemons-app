@@ -4,7 +4,7 @@ import { Link } from "wouter";
 import PokemonIMG from 'components/PokemonIMG';
 
 function CatalogListItem({ pokemon } = {}) {
-    const { id, name, type} = pokemon;
+    const { id, name } = pokemon;
     
     return (
         <li className="catalog-list-item">

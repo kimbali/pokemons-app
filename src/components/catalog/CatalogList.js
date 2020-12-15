@@ -5,11 +5,15 @@ import CatalogListItem from './CatalogListItem'
 function CatalogList({ pokemonsList = [] }) {
     return (
         <ul className="catalog-list">
-            {pokemonsList.map(pokemon => 
-                <CatalogListItem 
-                    key={`pokemon-${pokemon.id}`} 
-                    pokemon={pokemon}/>
-            )}
+            {
+                pokemonsList.length > 0 
+                    ? pokemonsList.map(pokemon => 
+                        <CatalogListItem 
+                            key={`pokemon-${pokemon.id}`} 
+                            pokemon={pokemon}/>
+                        ) 
+                    : <p>No pokemons</p>
+            }
         </ul>
     )
 }

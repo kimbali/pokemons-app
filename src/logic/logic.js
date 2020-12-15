@@ -51,6 +51,23 @@ const logic = {
                 return this._call(`pokemon/${id}`, 'GET', { 'Content-Type': 'application/json' }, undefined, 200)
             })
             .then(res => res.json())
+    },
+
+    createTypesList() {
+        return Promise.resolve()
+            .then(() => {
+                return this._call('types', 'GET', { 'Content-Type': 'application/json' }, undefined, 200)
+            })
+            .then(res => res.json())
+    },
+
+    findPokemonsByType({ type, lang }) {
+        console.log('type app', type)
+        return Promise.resolve()
+            .then(() => {
+                return this._call(`type/${type}/${lang}`, 'GET', { 'Content-Type': 'application/json' }, undefined, 200)
+            })
+            .then(res => res.json())
     }
 
 }
