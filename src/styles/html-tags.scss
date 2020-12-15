@@ -6,13 +6,13 @@ html {
     * {
         font-family: $mainFont;
         box-sizing: border-box;
-        color: $primary;
+        color: $secondary-dark;
         text-align: center;
     }
 
     body {
         position: relative;
-        background-color: $dark;
+        background-color: $light;
         line-height: 1.5;
         font-size: 1.2rem;
         margin: 0;

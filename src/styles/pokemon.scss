@@ -1,0 +1,77 @@
+#pokemon-details {
+
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+
+        @include media('mama-bear') {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .pokemon-img-container,
+        .pokemon-details-data {
+            width: 100%;
+
+            @include media('mama-bear') {
+                width: 48%;
+            }
+        }
+    }
+
+    .pokemon-img-container {
+        width: 50%;
+
+        img {
+            min-height: 200px;
+
+            @include media('mama-bear') {
+                min-height: 100%;
+            }
+        }
+    }
+
+
+    .pokemon-details-data {
+        width: 50%;
+
+        .level-bar,
+        .level {
+            height: 2.5rem;
+            border-radius: 20px;
+            color: $primary;
+            box-shadow: $downShadow;
+        }
+
+        .level-bar {
+            width: 100%;
+            background-color: $secondary-dark;
+            margin-bottom: 1rem;
+            overflow: hidden;
+
+            p {
+                color: $primary;
+            }
+        }
+
+        .level {
+
+            &.higher,
+            &.lower {
+                background-color: $secondary;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding-left: 1rem;
+            }
+
+            &.higher {
+                background-color: $primary-dark;
+
+                p {
+                    color: $secondary-dark;
+                }
+            }
+        }
+    }
+}

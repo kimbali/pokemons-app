@@ -45,6 +45,14 @@ const logic = {
             .then(res => res.json())
     },
 
+    retrievePokemonById(id) {
+        return Promise.resolve()
+            .then(() => {
+                return this._call(`pokemon/${id}`, 'GET', { 'Content-Type': 'application/json' }, undefined, 200)
+            })
+            .then(res => res.json())
+    }
+
 }
 
 module.exports = logic

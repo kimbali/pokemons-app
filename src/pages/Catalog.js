@@ -12,7 +12,7 @@ function Catalog() {
     const [page, setPage] = useState(0);
     const { isNearScreen } = useNearScreen({ externalRef, once: false });
     const { lang, } = useContext(LanguageContext);
-    const [currentLang, setCurrentLang] = useState(lang)
+    const [currentLang, setCurrentLang] = useState(lang);
 
     useEffect(() => {
         setPage(0);

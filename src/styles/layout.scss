@@ -8,17 +8,23 @@
         .logo {
             height: 4rem;
             margin: 0;
+            cursor: pointer;
         }
     }
 
     h1 {
-        background-color: $secondary;
+        background-color: $secondary-dark;
         margin: 0;
         padding: 1rem 0 1rem;
         color: $primary;
         font-family: $secondFont;
         position: sticky;
         top: 0;
+        font-size: 1.5rem;
+
+        @include media('mama-bear') {
+            font-size: 2rem;
+        }
     }
 
     .main-content {
