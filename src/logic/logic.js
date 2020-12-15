@@ -1,7 +1,8 @@
 const validateEmail = require('../utils/validate-email');
 
 const logic = {
-    url: 'http://localhost:8080',
+    _url: 'http://localhost:8080',
+    url: 'https://desolate-temple-98220.herokuapp.com',
 
     _call(path, method, headers, body, expectedStatus) {
         const config = { method }
