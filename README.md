@@ -2,7 +2,7 @@
     src="https://github.com/kimbali/pokemons-app/blob/main/src/images/pokemon-logo.png?raw=true"
     height="100px" />
 	
-## [Live Demo](https://pokemon-catalog.netlify.app/catalog)
+## [Live Demo](https://pokemon-catalog.netlify.app)
 
 ## How was done
 
