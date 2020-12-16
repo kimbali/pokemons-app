@@ -76,8 +76,6 @@ It has a method that reproduce a debounced call after X miliseconds. Used for th
 
 - [ ] Register is prepared on the api to be stored in a data base. The first aproach was to store it in firebase but the future versions are willing to store it in mongoDB, as it was done in one of my personal projects. [see github project](https://github.com/kimbali/hostess1.0/tree/main/hostess-api)
 
-- [ ] Solve a production bug with the infinit scroll in `/catalog` route (There is no scroll at all 😅). If `npm start` is runned in local, it's working propertly, as always, it work in local. 🐞
-
 - [ ] ESLint and webpack integration.
 
 - [ ] React test.  
@@ -87,6 +85,22 @@ It has a method that reproduce a debounced call after X miliseconds. Used for th
 [Kim Garcia Anton](https://github.com/kimbali)
 Javascript Programmer 👩‍💻 
 
+
+<img alt="Magic mashroom"
+    src="https://github.com/kimbali/pokemons-app/blob/main/src/images/pokedex.png?raw=true"
+    height="100px" /> 
+<img alt="Magic mashroom"
+    src="https://github.com/kimbali/pokemons-app/blob/main/src/images/pokedex.png?raw=true"
+    height="100px" />
+<img alt="Magic mashroom"
+    src="https://github.com/kimbali/pokemons-app/blob/main/src/images/pokedex.png?raw=true"
+    height="100px" />
+<img alt="Magic mashroom"
+    src="https://github.com/kimbali/pokemons-app/blob/main/src/images/pokedex.png?raw=true"
+    height="100px" />
+<img alt="Magic mashroom"
+    src="https://github.com/kimbali/pokemons-app/blob/main/src/images/pokedex.png?raw=true"
+    height="100px" />
 
 
 
