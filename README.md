@@ -74,7 +74,7 @@ It has a method that reproduce a debounced call after X miliseconds. Used for th
 
 ## TODO LIST
 
-- [ ] Register is prepared on the api to be stored in a data base. The first aproach was to store it in firebase but the future versions are willing to store it in mongoDB, as it was done in one of my personal projects. [see github project](https://github.com/kimbali/hostess1.0/tree/main/hostess-api)
+- [ ] Register is prepared on the api to be stored in a data base. The first aproach was to store it in firebase but the future versions are willing to store it in mongoDB, as it was done in one of my personal projects. [see github project with authentication logic for two diferent type of users](https://github.com/kimbali/hostess1.0/tree/main/hostess-api)
 
 - [ ] ESLint and webpack integration.
 
