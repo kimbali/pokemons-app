@@ -32,7 +32,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Deployment
 
-Is deployed in Netlify [SEE WEB PAGE] (https://pokemon-catalog.netlify.app/catalog)
+Is deployed in Netlify [SEE WEB PAGE](https://pokemon-catalog.netlify.app)
 API is desployed in Heroku. 
 
 ## Included NPM libraries
