@@ -20,5 +20,6 @@ CatalogListItem.propTypes = {
     pokemon: PropTypes.object
 }
 
-export default CatalogListItem;
+export default React.memo(CatalogListItem, (prevProps, nextProps) => prevProps.id === nextProps.id);
+
 

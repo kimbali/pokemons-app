@@ -3,18 +3,21 @@ import PropTypes from 'prop-types'
 import CatalogListItem from './CatalogListItem'
 
 function CatalogList({ pokemonsList = [] }) {
+    const isWaitingForData = pokemonsList.length === 0;
     return (
-        <ul className="catalog-list">
+        <>
             {
-                pokemonsList.length > 0 
-                    ? pokemonsList.map(pokemon => 
-                        <CatalogListItem 
-                            key={`pokemon-${pokemon.id}`} 
-                            pokemon={pokemon}/>
-                        ) 
-                    : <p>No pokemons</p>
+                isWaitingForData 
+                    ?   <div className="spinner"></div>
+                    :   <ul className="catalog-list">
+                            { pokemonsList.map(pokemon => 
+                                <CatalogListItem 
+                                    key={`pokemon-${pokemon.id}`} 
+                                    pokemon={pokemon}/>
+                            )}
+                        </ul>
             }
-        </ul>
+        </>
     )
 }
 
