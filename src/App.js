@@ -10,6 +10,7 @@ function App() {
     <div className="App">
       <LanguageContextProvider>
         <Switch>
+            <Route path="/" component={Catalog}/>
             <Route path="/catalog" component={Catalog}/>
             <Route path="/pokemon/:id" component={Pokemon}/>
             <Route path="/sorting/:type" component={Sorting}/>
