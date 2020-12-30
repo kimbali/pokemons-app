@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import LanguageContext from 'context/LanguageContext';
-import languages from 'config.json';
+import { LANGUAGES } from 'config.json';
 import LanguageListItem from './LanguageListItem';
 
 function LanguageList() {
@@ -13,7 +13,7 @@ function LanguageList() {
     return (
         <ul className="languages-list">
             {
-                Object.keys(languages).map(ISOcode => 
+                Object.keys(LANGUAGES).map(ISOcode => 
                     <LanguageListItem key={`country-iso-code-${ISOcode}`} ISOcode={ISOcode} handleCountrySelection={handleCountrySelection}/>
             )}
         </ul>

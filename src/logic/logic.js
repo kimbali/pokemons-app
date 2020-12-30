@@ -1,3 +1,5 @@
+import { DEFAULT_SIZE } from 'config.json'
+const { isMobile, isTablet } = require('utils/breakpoints');
 const validateEmail = require('../utils/validate-email');
 
 const logic = {
@@ -39,9 +41,11 @@ const logic = {
     },
 
     createCatalog({ page, lang }) {
+        const size = isMobile() ? 10 : isTablet() ? DEFAULT_SIZE : 50;
+
         return Promise.resolve()
             .then(() => {
-                return this._call(`catalog/${page}/${lang}`, 'GET', { 'Content-Type': 'application/json' }, undefined, 200)
+                return this._call(`catalog/${page}/${lang}/${size}`, 'GET', { 'Content-Type': 'application/json' }, undefined, 200)
             })
             .then(res => res.json())
     },
@@ -73,4 +77,4 @@ const logic = {
 
 }
 
-module.exports = logic
+export default logic;

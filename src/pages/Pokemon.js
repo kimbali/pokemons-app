@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Layout from 'HOK/Layout'
 import logic from 'logic/logic'
 import LanguageContext from 'context/LanguageContext';
-import languages from 'config.json';
+import { LANGUAGES } from 'config.json';
 import PokemonIMG from 'components/PokemonIMG';
 import LevelBar from 'components/LevelBar';
 
@@ -19,7 +19,7 @@ function Pokemon({ params }) {
     
     if(!pokemonData) return null;
     
-    const pokemonName = pokemonData.name[languages[lang]]
+    const pokemonName = pokemonData.name[LANGUAGES[lang]]
     const { base } = pokemonData;
     return (
         <Layout pageId="pokemon-details" title={pokemonName}>
